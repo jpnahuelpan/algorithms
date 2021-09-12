@@ -10,21 +10,8 @@ Data files:   https://algs4.cs.princeton.edu/14analysis/1Kints.txt
               https://algs4.cs.princeton.edu/14analysis/32Kints.txt
               https://algs4.cs.princeton.edu/14analysis/1Mints.txt
 """
-from typing import List
 import sys
-
-
-class ReadInts():
-    def __init__(self, file: str) -> None:
-        self._file = file
-
-    def read(self) -> List:
-        f = open(self._file, "r")
-        list_ints: List[int] = []
-        for line in f:
-            list_ints.append(int(line))
-        f.close()
-        return list_ints
+from ReadFileInts import ReadInts, List
 
 
 class TreeSum():
